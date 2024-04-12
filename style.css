@@ -1,0 +1,220 @@
+body,
+html {
+    font-family: "Montserrat", sans-serif;
+}
+
+.pageContainer {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 1440px;
+}
+
+nav>div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+nav a {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    position: relative;
+    width: fit-content;
+}
+
+nav a.active {
+    color: #e88836;
+}
+
+nav a.active::before {
+    width: 50%;
+}
+
+nav a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    left: 0;
+    border-bottom: 2px solid #e88836;
+    transition: all .2s ease-in-out;
+}
+
+nav a:hover:before {
+    width: 50%;
+}
+
+a {
+    transition: .2s;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #e88836;
+}
+
+a img {
+    color: #e88836;
+}
+
+.position-box {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 12px 16px;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+    nav>div {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo-img {
+        width: 150px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav>div {
+        gap: 2rem;
+    }
+
+    footer {
+        padding: 3rem;
+    }
+
+    .position-box h4 {
+        font-size: 22px;
+    }
+
+    .position-box h5 {
+        font-size: 18px;
+    }
+}
+
+.responsive-header {
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 12;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .6);
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.position-box h4 {
+    font-size: 16px;
+}
+
+.position-box h5 {
+    font-size: 14px;
+}
+
+footer {
+    background-color: #000;
+    padding: 3rem 0;
+}
+
+.form-check-input:checked[type=radio] {
+    background-image: url("./images/tick.svg") !important;
+}
+
+.form-check-label {
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    border-radius: 2px !important;
+}
+
+.form-check-input:focus {
+    box-shadow: unset;
+    border-color: rgba(0, 0, 0, .25);
+}
+
+.form-check-input:checked {
+    background-color: #e88836;
+    border-color: #e88836;
+}
+
+.btn-primary {
+    background-color: #e88836;
+    border-color: #e88836;
+}
+
+.btn-primary:focus {
+    background-color: #e88836;
+    border-color: #e88836;
+    box-shadow: unset;
+}
+
+.btn-primary:hover {
+    background-color: #e88836;
+    border-color: #e88836;
+}
+
+.modal-dialog {
+    max-width: 750px;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: unset;
+}
+
+.upload-form p {
+    color: rgba(0, 0, 0, 0.72);
+}
+
+.upload-input {
+    display: none;
+    visibility: hidden;
+}
+
+.file-name {
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.upload-field {
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-close:focus {
+    box-shadow: unset;
+}

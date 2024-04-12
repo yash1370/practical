@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header class="py-4">
+        <div class="pageContainer position-relative z-10">
+            <div class="d-flex justify-content-between gap-8 align-items-center">
+                <a href="/">
+                    <img src="./images/logoLightTheme.webp" class="logo-img" alt="light-logo" width="240" height="62" />
+                </a>
+                <nav class="d-none d-lg-block">
+                    <div>
+                        <a href="/" class="" rel="noreferrer" title="Home">Home</a>
+                        <a href="/" class="" rel="noreferrer" title="About Us">About Us</a>
+                        <a href="/" class="" rel="noreferrer" title="Digital Commerce">Digital Commerce</a>
+                        <a href="/" class="" rel="noreferrer" title="SAP CX">SAP CX</a>
+                        <a href="/" class="active" rel="noreferrer" title="Career">Career</a>
+                        <a href="/" class="" rel="noreferrer" title="Contact Us">Contact Us</a>
+                    </div>
+                </nav>
+                <div class="d-lg-none" id="menu-icon">
+                    <img src="./images/menu.svg" alt="menu-icon" width="32" height="32">
+                </div>
+            </div>
+            <div class="responsive-header" id="responsive-navbar">
+                <div class="d-flex align-items-center justify-content-between px-3 pt-4">
+                    <a href="/">
+                        <img src="./images/logoDarkTheme.webp" class="logo-img" alt="dark-lLogo" width="240"
+                            height="62" />
+                    </a>
+                    <div id="cross-icon">
+                        <img src="./images/cross.svg" alt="" width="24" height="24">
+                    </div>
+                </div>
+                <div class="overlay overlay-navigation"></div>
+                <nav class="py-4 px-5">
+                    <div>
+                        <a href="/" class="" rel="noreferrer" title="Home">Home</a>
+                        <a href="/" class="" rel="noreferrer" title="About Us">About Us</a>
+                        <a href="/" class="" rel="noreferrer" title="Digital Commerce">Digital Commerce</a>
+                        <a href="/" class="" rel="noreferrer" title="SAP CX">SAP CX</a>
+                        <a href="/" class="active" rel="noreferrer" title="Career">Career</a>
+                        <a href="/" class="" rel="noreferrer" title="Contact Us">Contact Us</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pageContainer">
+        <div class="mt-4">
+            <p class="fs-4 mb-0" style="font-weight: 500">We're Hiring</p>
+            <p class="fs-2 fw-bold">Join Our Team</p>
+        </div>
+        <div class="d-flex mt-4 mb-5 gap-5 flex-column flex-md-row">
+            <div>
+                <h4 class="fw-bold">Departments</h4>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="option" value="development" id="development"
+                        checked onchange="changeText()" />
+                    <label class="form-check-label" for="development">
+                        Development
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="option" value="marketing" id="marketing"
+                        onchange="changeText()" />
+                    <label class="form-check-label" for="marketing"> Marketing </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="option" value="sales" id="sales"
+                        onchange="changeText()" />
+                    <label class="form-check-label" for="sales"> Sales </label>
+                </div>
+            </div>
+
+            <div class="w-100 mb-5">
+                <h4 class="fw-bold">All Position</h4>
+                <div>
+                    <div class="d-flex align-items-center justify-content-between gap-2 position-box">
+                        <div>
+                            <h4 class="fw-bold">Frontend Developer</h4>
+                            <h5 class="text-capitalize" id="displayText"></h5>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-position-name="Frontend Developer">
+                            Apply Now
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2 position-box">
+                        <div>
+                            <h4 class="fw-bold">Backend Developer</h4>
+                            <h5 class="text-capitalize" id="displayText"></h5>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-position-name="Backend Developer">
+                            Apply Now
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2 position-box">
+                        <div>
+                            <h4 class="fw-bold">UI/UX Developer</h4>
+                            <h5 class="text-capitalize" id="displayText"></h5>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-position-name="UI/UX Developer">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="fw-bold" id="modalTitle"></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="row gap-4 pt-3">
+                    <div class="col-lg-6">
+                        <h6 style="font-weight: 500">Job Description</h6>
+                        <p style="font-size: 14px">
+                            We are looking for a qualified Front-end developer to join our
+                            IT team. You will be responsible for building the 'client-side'
+                            of our web applications. You should be able to translate our
+                            company and customer needs into functional and appealing
+                            interactive applications.
+                        </p>
+                        <p style="font-size: 14px" class="mb-1">Responsibilities</p>
+                        <ul style="font-size: 14px">
+                            <li>
+                                Use markup languages like HTML to create user-friendly web
+                                pages
+                            </li>
+                            <li>Maintain and improve website</li>
+                            <li>Optimize applications for maximum speed</li>
+                            <li>Design mobile-based features</li>
+                            <li>
+                                Collaborate with back-end developers and web designers to
+                                improve usability
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <form id="application-form" onsubmit="submitForm(event)">
+                            <div class="form">
+                                <label for="name">Name*</label>
+                                <input type="text" id="name" name="name" />
+                            </div>
+                            <div class="form">
+                                <label for="email">Email*</label>
+                                <input type="email" id="email" name="email" />
+                            </div>
+                            <div class="form upload-form">
+                                <label for="letter">Cover Letter*</label>
+                                <label for="letter" class="d-flex align-items-center gap-2 upload-field">
+                                    <p class="mb-0 fw-bold">Upload Cover Letter</p>
+                                    <img src="./images/Upload.svg" alt="" />
+                                    <input class="upload-input" type="file" id="letter" name="letter"
+                                        accept=".pdf,.doc,.docx" onchange="fileSelected('letter')" />
+                                </label>
+                                <span id="letterName" class="file-name"></span>
+                            </div>
+                            <div class="form upload-form">
+                                <label for="resume">Resume*</label>
+                                <label for="resume" class="d-flex align-items-center gap-2 upload-field">
+                                    <p class="mb-0 fw-bold">Upload Resume</p>
+                                    <img src="./images/Upload.svg" alt="" />
+                                    <input class="upload-input" type="file" id="resume" name="resume"
+                                        accept=".pdf,.doc,.docx" onchange="fileSelected('resume')" />
+                                </label>
+                                <span id="resumeName" class="file-name"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                Save changes
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5">
+        <section class="pageContainer d-flex flex-column gap-5 text-white">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-5">
+                <a href="/">
+                    <img src="./images/logoDarkTheme.webp" class="logo-img" alt="dark-lLogo" width="240" height="62" />
+                </a>
+                <div class="d-flex gap-4">
+                    <a href="https://www.linkedin.com/company/aigitaltech" target="_blank" title="Linkedin">
+                        <img src="./images/linkedin.svg" alt="Linkedin" loading="lazy" width="24" height="24" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/aigitaltech" target="_blank" title="Linkedin">
+                        <img src="./images/facebook.svg" alt="Facebook" loading="lazy" width="24" height="24"
+                            decoding="async" data-nimg="1" style="color: transparent" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/aigitaltech" target="_blank" title="Linkedin">
+                        <img src="./images/instagram.svg" alt="Instagram" loading="lazy" width="24" height="24" />
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-4">
+                <nav>
+                    <div>
+                        <a href="/" class="" rel="noreferrer" title="Home">Home</a>
+                        <a href="/" class="" rel="noreferrer" title="About Us">About Us</a>
+                        <a href="/" class="" rel="noreferrer" title="Digital Commerce">Digital Commerce</a>
+                        <a href="/" class="" rel="noreferrer" title="SAP CX">SAP CX</a>
+                        <a href="/" class="active" rel="noreferrer" title="Career">Career</a>
+                        <a href="/" class="" rel="noreferrer" title="Contact Us">Contact Us</a>
+                    </div>
+                </nav>
+                <p class="mb-0">© 2024 Aigital Technologies. All Rights Reserved.</p>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
